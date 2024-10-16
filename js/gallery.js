@@ -107,11 +107,9 @@ const onGalleryCardClick = event => {
     
   if (event.target.nodeName !== "IMG") return;
   const largeImg = event.target.dataset.source;
-  const instance = basicLightbox.create(`
-     <img src=${largeImg}>
-`);
+  const instance = basicLightbox.create(`<img src=${largeImg}>`);
     
   instance.show();
 };
 
-gallery.addEventListener('click', onGalleryCardClick);
+gallery.addEventListener("click", onGalleryCardClick);
